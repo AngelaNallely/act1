@@ -1,0 +1,137 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #f6f8fa 0%, #ffffff 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 1200px;
+  background: #f6f8fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+header, footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  padding: 20px;
+}
+
+.form-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 600px; /* Establece un ancho máximo para el formulario */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center; /* Centra el título del formulario */
+}
+
+form label, form input, form button {
+  margin-bottom: 10px;
+}
+
+form input, form button {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+form button {
+  background-color: #2c3e50;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1a252f;
+}
+
+.student-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.student-item {
+  flex: 1 1 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.student-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.student-item.red {
+  background-color: #f9d6c1;
+}
+
+.remove-button {
+  color: red;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+  }
+  .form-container {
+    flex: 0 0 40%;
+    margin-right: 20px;
+  }
+  .student-list {
+    flex: 0 0 60%;
+  }
+  .student-item {
+    flex: 1 1 calc(33.33% - 20px); /* Tres tarjetas por fila */
+  }
+}
+@media (min-width: 1024px) {
+  .form-container {
+    flex: 0 0 30%;
+    margin-right: 20px;
+  }
+  .student-list {
+    flex: 0 0 70%;
+  }
+  .student-item {
+    flex: 1 1 calc(25% - 20px); /* Cuatro tarjetas por fila */
+  }
+}
